@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  httpd:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+      - 423_24s_ex00_node_modules:/workspace/node_modules
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+volumes:
+  423_24s_ex00_node_modules:
